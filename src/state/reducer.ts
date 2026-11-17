@@ -28,6 +28,7 @@ export type Acao =
   | { tipo: 'ESCOLHER_MUNICIPIO'; municipioId: string }
   | { tipo: 'DEFINIR_MODO_DEMO'; ativo: boolean }
   | { tipo: 'ADICIONAR_RELATO'; relato: Relato }
+  | { tipo: 'REMOVER_RELATO'; id: string }
   | { tipo: 'REGISTRAR_DECISAO'; decisao: Decisao }
   | { tipo: 'CLIMA_CARREGANDO' }
   | { tipo: 'CLIMA_OK'; series: SerieClima[]; avaliadoEm: string; aviso: string | null }
@@ -61,6 +62,9 @@ export function reducer(estado: Estado, acao: Acao): Estado {
 
     case 'ADICIONAR_RELATO':
       return { ...estado, relatos: [acao.relato, ...estado.relatos] };
+
+    case 'REMOVER_RELATO':
+      return { ...estado, relatos: estado.relatos.filter((r) => r.id !== acao.id) };
 
     case 'REGISTRAR_DECISAO':
       return { ...estado, decisoes: [acao.decisao, ...estado.decisoes] };

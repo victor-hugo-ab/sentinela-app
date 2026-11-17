@@ -28,6 +28,7 @@ interface ContextoApp {
   avaliacaoDe: (municipioId: string) => Avaliacao | undefined;
   atualizarClima: () => Promise<void>;
   adicionarRelato: (relato: Omit<Relato, 'id' | 'criadoEm'>) => void;
+  removerRelato: (id: string) => void;
   registrarDecisao: (decisao: Omit<Decisao, 'id' | 'criadaEm'>) => void;
   escolherMunicipio: (municipioId: string) => void;
   definirModoDemo: (ativo: boolean) => void;
@@ -119,6 +120,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
           tipo: 'ADICIONAR_RELATO',
           relato: { ...relato, id: novoId(), criadoEm: new Date().toISOString() },
         }),
+      removerRelato: (id) => dispatch({ tipo: 'REMOVER_RELATO', id }),
       registrarDecisao: (decisao) =>
         dispatch({
           tipo: 'REGISTRAR_DECISAO',
