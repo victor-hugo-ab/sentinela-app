@@ -78,7 +78,7 @@ export function DetalheScreen({ route }: Props) {
     setAcao('');
     setJustificativa('');
     setConfirmou(false);
-    setConfirmacao('Decisão registrada neste aparelho. O app não envia avisos: use os canais oficiais da defesa civil.');
+    setConfirmacao('Decisão registrada neste aparelho. Este protótipo não envia avisos: no Sentinela completo, o aviso aprovado sai pelo WhatsApp.');
   };
 
   return (

@@ -107,7 +107,7 @@ export type AcaoDecisao = 'aprovar' | 'observar' | 'descartar';
 export const ACOES_DECISAO: ReadonlyArray<{ valor: AcaoDecisao; rotulo: string }> = [
   { valor: 'aprovar', rotulo: 'Aprovar aviso' },
   { valor: 'observar', rotulo: 'Manter em observação' },
-  { valor: 'descartar', rotulo: 'Descartar' },
+  { valor: 'descartar', rotulo: 'Rejeitar aviso' },
 ];
 
 // Registro da decisão do gestor sobre um alerta. É o que torna o apoio auditável.

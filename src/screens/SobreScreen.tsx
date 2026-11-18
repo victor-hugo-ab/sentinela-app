@@ -48,7 +48,7 @@ export function SobreScreen() {
           Painel de inteligência territorial do Vale do Taquari (RS), criado para o case Territory Predictive Insights da Global Solution 2026.2. Ele antecipa o risco de alagamento a partir da chuva observada e prevista e apoia a decisão do gestor público.
         </Paragrafo>
         <Paragrafo>
-          O app não toma decisões nem envia avisos à população: ele mostra o nível de risco, a justificativa, a confiança e as limitações, e registra o que o gestor decidiu e por quê.
+          O app não toma decisões nem envia avisos à população: ele mostra o nível de risco, a justificativa, a confiança e as limitações, e registra o que o gestor decidiu e por quê. No Sentinela completo, o aviso aprovado pelo operador sai pelo WhatsApp; aqui o gestor só registra a decisão.
         </Paragrafo>
       </Cartao>
 

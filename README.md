@@ -16,9 +16,13 @@ O Sentinela antecipa o risco de alagamento nos municípios do Vale do Taquari (R
 
 - **Painel:** indicadores (municípios em nível alto ou mais, alertas sem decisão, maior acumulado de chuva), gráfico de municípios por nível de risco e gráfico de chuva diária (observada x prevista) do município escolhido.
 - **Alertas:** lista dos municípios do mais grave para o menos grave, com filtro "Sem decisão".
-- **Detalhe do alerta:** nível, **justificativa** (por que este nível), **nível de confiança** com os motivos, **limitações**, gráfico, relatos de campo do município e sugestão de encaminhamento. O gestor escolhe *aprovar aviso*, *manter em observação* ou *descartar*, **sempre com justificativa escrita**; aprovar exige confirmar que revisou nível, confiança e limitações.
+- **Detalhe do alerta:** nível, **justificativa** (por que este nível), **nível de confiança** com os motivos, **limitações**, gráfico, relatos de campo do município e sugestão de encaminhamento. O gestor escolhe *aprovar aviso*, *manter em observação* ou *rejeitar aviso*, **sempre com justificativa escrita**; aprovar exige confirmar que revisou nível, confiança e limitações.
 - **Relatos de campo:** formulário validado para registrar ocorrências (alagamento, rio acima do normal, pessoas em risco etc.), com lista e exclusão.
 - **Sobre e privacidade:** modo demonstração, fonte dos dados, método, limitações e vieses, e botão para apagar os dados do aparelho.
+
+## Relação com o Sentinela completo
+
+Este app é o painel do gestor do projeto **Sentinela** (estimativa diária de risco de alagamento no Vale do Taquari, com regressão logística, painel do operador e avisos por WhatsApp). Aqui, a estimativa usa a **regra simples** que no projeto completo serve de comparação para o modelo: se a chuva de 3 dias passa de certo limite, sobe o nível. Os níveis (baixo, moderado, alto, severo, extremo) e a regra de que o alerta nasce a partir de "alto" são os mesmos do projeto. Para ligar o modelo treinado, basta trocar a função `avaliarRisco` por uma chamada à API do Sentinela, sem mexer nas telas. O aviso aprovado não é enviado por este protótipo; no sistema completo ele sai pelo WhatsApp após a aprovação do operador.
 
 ## Como o risco é estimado
 
