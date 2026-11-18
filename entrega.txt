@@ -9,4 +9,4 @@ Integrantes (nome completo - RM):
 
 
 Link do GitHub:
-PREENCHER COM O LINK DO REPOSITORIO
+https://github.com/victor-hugo-ab/sentinela-app
