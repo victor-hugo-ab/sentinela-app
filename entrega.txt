@@ -1,0 +1,11 @@
+Global Solution 2026.2 - Cross-Platform Application Development
+Turma de Fevereiro - 2o ano - Ciencia da Computacao
+Projeto: Sentinela - Painel de Inteligencia Territorial (React Native / Expo)
+
+Integrantes (nome completo - RM):
+- PREENCHER NOME COMPLETO - RM PREENCHER
+- PREENCHER NOME COMPLETO - RM PREENCHER
+- PREENCHER NOME COMPLETO - RM PREENCHER
+
+Link do GitHub:
+PREENCHER COM O LINK DO REPOSITORIO
