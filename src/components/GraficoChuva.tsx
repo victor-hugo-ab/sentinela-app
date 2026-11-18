@@ -1,9 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import Svg, { Line, Rect, Text as TextoSvg } from 'react-native-svg';
 import { diaDaSemana, formatarDiaMes, formatarMm } from '../domain/datas';
 import { DiaChuva } from '../domain/tipos';
 import { cores, espaco, tamanhoFonte } from '../theme/tema';
+
+// Na web o SVG usaria fonte serifada por padrão; no celular fica a fonte do sistema.
+const FAMILIA = Platform.OS === 'web' ? 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif' : undefined;
 
 interface Props {
   dias: DiaChuva[];
@@ -55,13 +58,13 @@ export function GraficoChuva({ dias, dataBase, largura, altura = 190 }: Props) {
                     strokeDasharray={previsto ? '4,3' : undefined}
                   />
                 ) : null}
-                <TextoSvg x={centro} y={dia.chuvaMm === null ? margemTopo + areaAltura - 4 : y - 4} fontSize={10} fontWeight="700" fill={cores.texto} textAnchor="middle">
+                <TextoSvg x={centro} y={dia.chuvaMm === null ? margemTopo + areaAltura - 4 : y - 4} fontFamily={FAMILIA} fontSize={10} fontWeight="700" fill={cores.texto} textAnchor="middle">
                   {dia.chuvaMm === null ? 's/d' : formatarMm(dia.chuvaMm)}
                 </TextoSvg>
-                <TextoSvg x={centro} y={altura - 20} fontSize={10} fontWeight={hoje ? '800' : '400'} fill={cores.texto} textAnchor="middle">
+                <TextoSvg x={centro} y={altura - 20} fontFamily={FAMILIA} fontSize={10} fontWeight={hoje ? '800' : '400'} fill={cores.texto} textAnchor="middle">
                   {hoje ? 'hoje' : diaDaSemana(dia.data)}
                 </TextoSvg>
-                <TextoSvg x={centro} y={altura - 7} fontSize={9} fill={cores.textoSuave} textAnchor="middle">
+                <TextoSvg x={centro} y={altura - 7} fontFamily={FAMILIA} fontSize={9} fill={cores.textoSuave} textAnchor="middle">
                   {formatarDiaMes(dia.data)}
                 </TextoSvg>
               </React.Fragment>

@@ -35,10 +35,10 @@ export interface EstiloNivel {
 
 export const coresNivel: Record<NivelRisco, EstiloNivel> = {
   baixo: { fundo: '#E3F4EA', texto: '#14532D', borda: '#1E7A46', simbolo: '○' },
-  moderado: { fundo: '#FFF4CC', texto: '#5C4000', borda: '#A87A00', simbolo: '◐' },
-  alto: { fundo: '#FFE4CC', texto: '#702E00', borda: '#C25A00', simbolo: '●' },
-  severo: { fundo: '#FADADD', texto: '#6B0D15', borda: '#B3261E', simbolo: '◆' },
-  extremo: { fundo: '#4A1D5E', texto: '#FFFFFF', borda: '#4A1D5E', simbolo: '▲' },
+  moderado: { fundo: '#FFF4CC', texto: '#5C4000', borda: '#A87A00', simbolo: '◇' },
+  alto: { fundo: '#FFE4CC', texto: '#702E00', borda: '#C25A00', simbolo: '◆' },
+  severo: { fundo: '#FADADD', texto: '#6B0D15', borda: '#B3261E', simbolo: '▲' },
+  extremo: { fundo: '#4A1D5E', texto: '#FFFFFF', borda: '#4A1D5E', simbolo: '■' },
 };
 
 // Barrinhas de confiança: ▮▮▮ alta, ▮▮▯ média, ▮▯▯ baixa.
