@@ -80,7 +80,7 @@ export function PainelScreen({ navigation }: Props) {
         <GraficoNiveis contagem={contagem} />
       </Cartao>
 
-      <Cartao titulo="Chuva no município">
+      <Cartao titulo={`Chuva em ${nomeDoMunicipio(config.municipioId)}`}>
         <Seletor
           opcoes={MUNICIPIOS.map((m) => ({ valor: m.id, rotulo: m.nome }))}
           valor={config.municipioId}

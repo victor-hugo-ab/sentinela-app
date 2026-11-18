@@ -8,9 +8,9 @@ O Sentinela antecipa o risco de alagamento nos municípios do Vale do Taquari (R
 
 | Nome completo | RM |
 |---|---|
-| _preencher_ | _preencher_ |
-| _preencher_ | _preencher_ |
-| _preencher_ | _preencher_ |
+| Enzo Cerneviva | 563480 |
+| Matheus Lara | 560449 |
+| Victor Hugo | 564633 |
 
 ## O que o app faz
 
