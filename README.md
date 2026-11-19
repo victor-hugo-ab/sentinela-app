@@ -9,7 +9,7 @@ O Sentinela antecipa o risco de alagamento nos municípios do Vale do Taquari (R
 | Nome completo | RM |
 |---|---|
 | Enzo Cerneviva | 563480 |
-| Matheus Lara | 560449 |
+| Matheus Lara | 564049 |
 | Victor Hugo | 564633 |
 
 ## O que o app faz
@@ -107,3 +107,8 @@ src/
 └── theme/       cores, espaçamentos e escala de risco
 __tests__/       testes automáticos (jest)
 ```
+## Problemas comuns
+
+- *"You need to be signed in to Expo Go and Expo CLI..."*: entre na mesma conta Expo no app Expo Go e no computador. No terminal, rode npx expo login e depois npx expo start.
+- *O celular não encontra o servidor*: confirme que celular e computador estão na mesma rede Wi-Fi. Se continuar, rode npx expo start --tunnel.
+- *Sem internet na apresentação*: abra a aba Sobre e ligue o Modo demonstração.
